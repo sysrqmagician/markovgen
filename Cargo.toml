@@ -1,6 +1,6 @@
 [package]
 name = "markovgen"
-version = "0.1.0"
+version = "0.2.0"
 description = "A library for building markov chain graphs from text datasets and performantly generating text sequences by traversing them, includes an accompanying CLI application."
 license = "MIT"
 repository = "https://github.com/sysrqmagician/markovgen"

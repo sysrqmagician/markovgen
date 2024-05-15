@@ -1213,7 +1213,7 @@ checksum = "784462f20dddd9dfdb45de963fa4ad4a288cb10a7889ac5d2c34fb6481c6b213"
 
 [[package]]
 name = "markovgen"
-version = "0.1.0"
+version = "0.2.0"
 dependencies = [
  "bincode",
  "cargo-edit",
