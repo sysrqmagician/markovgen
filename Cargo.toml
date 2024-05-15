@@ -11,17 +11,19 @@ edition = "2021"
 
 [features]
 cli_no_print = []
+serde = ["dep:serde"]
 
 [[bin]]
 name = "markovcli"
 path = "src/bin/cli.rs"
+required-features = ["serde"]
 
 [dependencies]
 bincode = "1.3.3"
 clap = { version = "4.5.2", features = ["derive"] }
 clap_complete = "4.5.1"
 rand = "0.8.5"
-serde = { version = "1.0.197", features = ["derive", "rc"] }
+serde = { version = "1.0.197", features = ["derive", "rc"], optional = true}
 smartstring = "1.0.1"
 
 [dev-dependencies]

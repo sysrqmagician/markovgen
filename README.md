@@ -6,7 +6,7 @@ A library for building markov chain graphs from text datasets and performantly g
 - Configurable minimum sequence length
 - An example CLI application (markovcli) that supports building graphs from datasets and writing them to the disk, as well as sampling such graphs with customizable sequence length.
   - Capable of generating >2.5 million names per second with default settings (and cli_no_print feature set to avoid IO overhead) on my machine from the first_names benchmark dataset (see ``benches/``)
-  - Try it using ``cargo run -r --bin markovcli``
+  - Try it using ``cargo run -r -F serde --bin markovcli``
 
 ## Example
 ``src/bin/example.rs``:

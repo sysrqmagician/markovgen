@@ -12,15 +12,17 @@ use smartstring::alias::String;
 use std::{collections::HashMap, error::Error, fmt::Display, sync::Arc};
 
 use rand::Rng;
+#[cfg(feature = "serde")]
 use serde::{Deserialize, Serialize};
 
-#[derive(Serialize, Deserialize)]
+#[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
 struct Vertex {
     value: char,
     edges: Vec<Edge>,
 }
 
-#[derive(Serialize, Deserialize, Clone)]
+#[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
+#[derive(Clone)]
 struct Edge {
     vertex_index: usize,
     probability: f32,
@@ -138,7 +140,7 @@ impl GraphConstructor {
     }
 }
 
-#[derive(Serialize, Deserialize)]
+#[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
 pub struct Graph {
     vertices: Vec<Vertex>,
 }
