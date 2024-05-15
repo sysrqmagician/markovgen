@@ -1,0 +1,1 @@
+The data was extracted from the "Frequently Occurring Surnames from the 1990 Census" dataset released by the US Census Bureau under https://www.census.gov/topics/population/genealogy/data/1990_census/1990_census_namefiles.html. Specifically, the names were extracted from the file dist.male.first (https://www2.census.gov/topics/genealogy/1990surnames/dist.male.first).
