@@ -1,0 +1,6 @@
+*.txt
+*.graph.json
+*.graph.bin
+/perf.*
+/flamegraph*svg
+target/
