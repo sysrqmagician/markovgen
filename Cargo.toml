@@ -27,6 +27,7 @@ serde = { version = "1.0.197", features = ["derive", "rc"], optional = true}
 smartstring = "1.0.1"
 
 [dev-dependencies]
+cargo-edit = "0.12.2"
 criterion = "0.5.1"
 flamegraph = "0.6.5"
 
