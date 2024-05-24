@@ -11,7 +11,6 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 use smartstring::alias::String;
 use std::{collections::HashMap, error::Error, fmt::Display, sync::Arc};
 
-use rand::Rng;
 #[cfg(feature = "serde")]
 use serde::{Deserialize, Serialize};
 
@@ -237,7 +236,7 @@ impl GraphStepper {
     }
 
     pub fn step(&mut self) -> Result<(), GraphStepperError> {
-        let random_value: f32 = rand::thread_rng().gen_range(0.0..1.0);
+        let random_value: f32 = fastrand::f32();
         let mut selection: Option<usize> = None;
 
         let mut edges = &self.get_current_vertex().edges;
@@ -357,7 +356,7 @@ impl GraphStepper {
     }
 
     fn random_position(&self) -> usize {
-        rand::thread_rng().gen_range(0..self.graph.vertices.len())
+        fastrand::usize(0..self.graph.vertices.len())
     }
 
     fn get_current_vertex(&self) -> &Vertex {
